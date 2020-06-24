@@ -5,9 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
   getBeer() {
-    return this.http.get('https://api.openbrewerydb.org/breweries');
+    return this._http.get(
+      'https://jsonplaceholder.typicode.com/todos?_limit=10'
+    );
   }
 }

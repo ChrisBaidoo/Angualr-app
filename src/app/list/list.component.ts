@@ -8,14 +8,14 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  brews: object;
+  cutOffHour: object;
 
   constructor(private _http: HttpService) {}
 
   ngOnInit(): void {
     this._http.getBeer().subscribe((data) => {
-      this.brews = data;
-      console.log(this.brews);
+      this.cutOffHour = data;
+      console.log(this.cutOffHour);
     });
   }
 }
