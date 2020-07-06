@@ -1,1 +1,8 @@
-<p>list works!</p>
+<h1>Todo</h1>
+<ul *ngIf="todoItems">
+  <li *ngFor="let todoItem of todoItems">
+    <p class="name">{{ todoItem.title }}</p>
+    <br />
+    <p class="name">{{ todoItem.completed }}</p>
+  </li>
+</ul>
