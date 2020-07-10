@@ -7,9 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class HttpService {
   constructor(private _http: HttpClient) {}
 
+  //Make Api call
+
   getBeer() {
     return this._http.get(
-      'https://jsonplaceholder.typicode.com/todos?_limit=10'
+      'https://jsonplaceholder.typicode.com/todos?_limit=8'
     );
   }
 }
